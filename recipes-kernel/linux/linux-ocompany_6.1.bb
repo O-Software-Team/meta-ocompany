@@ -1,12 +1,18 @@
 # Adapted from linux-imx.inc, copyright (C) 2013, 2014 O.S. Systems Software LTDA
 # Released under the MIT license (see COPYING.MIT for the terms)
 
+# In case of 8mp, kernel-module-isp-vvcam will build and cause the following error:
+# The recipe linux-ocompany is trying to install files into a shared area when those files already exist (kernel-module-imx219)
+# So we need to remove config from kernel to avoid error.
+EXTRA_OEMAKE:append:mx8mp-nxp-bsp = " CONFIG_VIDEO_IMX219=n"
+
 require recipes-kernel/linux/linux-imx.inc
 
 SUMMARY = "Linux kernel for Ocompany odevice"
 LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
-SRC_URI = "git://github.com/O-Software-Team/linux-ocompany.git;branch=${SRCBRANCH} \
+
+LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
+SRC_URI = "https://github.com/O-Software-Team/linux-ocompany.git;branch=${SRCBRANCH} \
 "
 
 LOCALVERSION = "-2.2.0+yocto"
