@@ -3,7 +3,7 @@ require recipes-bsp/u-boot/u-boot-ocompany-common_${PV}.inc
 
 DEPENDS += "bison-native"
 
-PROVIDES += "u-boot"
+PROVIDES += "imx-boot"
 
 BOOT_TOOLS = "imx-boot-tools"
 
