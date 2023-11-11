@@ -20,11 +20,11 @@ SRCBRANCH = "ocompany-imx_6.1"
 SRCREV = "9d46670da1fb90662848a8b214b5876e817a753b"
 DEPENDS += "lzop-native bc-native"
 COMPATIBLE_MACHINE = "(odevice8mp)"
-SRC_URI[sha256sum]="c672418836bc6e3d1b3c8c044d088f0789884ed8aa10de34f2193bcbee800b71"
+SRC_URI[sha256sum]="4ffeca77d1fbe693a27fd96b5e06644609e098f5172142d3a8ade2d66308886b"
 
 FILES_${KERNEL_PACKAGE_NAME}-base += "${nonarch_base_libdir}/modules/${KERNEL_VERSION}/modules.builtin.modinfo "
 
-KERNEL_DEFCONFIG ?= "ocompany_defconfig"
+KERNEL_DEFCONFIG ?= ".config"
 
 S = "${WORKDIR}/git"
 
