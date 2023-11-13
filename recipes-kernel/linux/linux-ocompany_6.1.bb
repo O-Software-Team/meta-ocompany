@@ -7,11 +7,12 @@ SUMMARY = "Linux kernel for Ocompany odevice"
 LICENSE = "GPLv2"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
-SRC_URI = "https://github.com/O-Software-Team/linux-ocompany.git;branch=${SRCBRANCH} \
+SRC_URI = "git://github.com/O-Software-Team/linux-ocompany.git;protocol=http;branch=${SRCBRANCH} \
 "
 
 LOCALVERSION = "-2.2.0+yocto"
 SRCBRANCH = "ocompany-imx_6.1"
+LINUX_VERSION = "ocompany-imx_6.1"
 SRCREV = "cc579b3ed03de36b0aff1ed1e0fec7e465640db6"
 DEPENDS += "lzop-native bc-native"
 COMPATIBLE_MACHINE = "(odevice8mp)"
