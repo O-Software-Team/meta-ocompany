@@ -15,7 +15,7 @@ SRCBRANCH = "ocompany-imx_6.1"
 SRCREV = "9d46670da1fb90662848a8b214b5876e817a753b"
 DEPENDS += "lzop-native bc-native"
 COMPATIBLE_MACHINE = "(odevice8mp)"
-SRC_URI[sha256sum]="4ffeca77d1fbe693a27fd96b5e06644609e098f5172142d3a8ade2d66308886b"
+SRC_URI[sha256sum]="19f25ddbc64880c8b6cddd252257e28de7de40671f33dc379315b646434384df"
 
 FILES_${KERNEL_PACKAGE_NAME}-base += "${nonarch_base_libdir}/modules/${KERNEL_VERSION}/modules.builtin.modinfo "
 
