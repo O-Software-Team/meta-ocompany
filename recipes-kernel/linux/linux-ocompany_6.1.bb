@@ -13,14 +13,14 @@ SRC_URI = "git://github.com/O-Software-Team/linux-ocompany.git;protocol=http;bra
 LOCALVERSION = "-2.2.0+yocto"
 SRCBRANCH = "ocompany-imx_6.1"
 LINUX_VERSION = "ocompany-imx_6.1"
-SRCREV = "cc579b3ed03de36b0aff1ed1e0fec7e465640db6"
+SRCREV = "8ea4c7ecd9aae0c8367b0fbdd01194f65a10030e"
 DEPENDS += "lzop-native bc-native"
 COMPATIBLE_MACHINE = "(odevice8mp)"
 SRC_URI[sha256sum]="19f25ddbc64880c8b6cddd252257e28de7de40671f33dc379315b646434384df"
 
 FILES_${KERNEL_PACKAGE_NAME}-base += "${nonarch_base_libdir}/modules/${KERNEL_VERSION}/modules.builtin.modinfo "
 
-KERNEL_DEFCONFIG ?= ".config"
+KERNEL_DEFCONFIG ?= "odevice8mp_defconfig"
 
 S = "${WORKDIR}/git"
 
