@@ -13,7 +13,7 @@ SRC_URI = "git://github.com/O-Software-Team/linux-ocompany.git;protocol=http;bra
 LOCALVERSION = "-2.2.0+yocto"
 SRCBRANCH = "ocompany-imx_6.1"
 LINUX_VERSION = "ocompany-imx_6.1"
-SRCREV = "8ea4c7ecd9aae0c8367b0fbdd01194f65a10030e"
+SRCREV = "48f794c6f794a79ab1a5d1f99813dd52d65b97a2"
 DEPENDS += "lzop-native bc-native"
 COMPATIBLE_MACHINE = "(odevice8mp)"
 SRC_URI[sha256sum]="19f25ddbc64880c8b6cddd252257e28de7de40671f33dc379315b646434384df"
