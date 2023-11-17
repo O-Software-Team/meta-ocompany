@@ -1,10 +1,9 @@
 DESCRIPTION = "U-Boot for Ocompany odevice"
 LICENSE = "GPLv2+"
-LIC_FILES_CHKSUM = "file://Licenses/README;md5=5a7450c57ffe5ae63fd732446b988025"
+LIC_FILES_CHKSUM = "file://Licenses/README;md5=01227781a96150b429023a200313f5e5"
 
-SRCREV = "94f0b1290a94e97ca2870122640c508f23b929f5"
-SRCBRANCH = "master"
-SRC_URI = "git://github.com/O-Software-Team/u-boot.git;branch=${SRCBRANCH}"
+SRCBRANCH = "u-boot-2023.07.y"
+SRC_URI = "https://github.com/u-boot/u-boot.git;branch=${SRCBRANCH};protocol=https"
 
 S = "${WORKDIR}/git"
 
