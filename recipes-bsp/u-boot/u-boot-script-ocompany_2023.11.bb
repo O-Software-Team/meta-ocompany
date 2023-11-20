@@ -42,4 +42,4 @@ addtask deploy after do_install before do_build
 
 FILES_${PN} += "/"
 
-COMPATIBLE_MACHINE = "(odevice8m|odevice8mm|odevice8mn|odevice8mp)"
+COMPATIBLE_MACHINE = "(odevice8mp)"

@@ -1,10 +1,18 @@
-DESCRIPTION = "U-Boot for Ocompany odevice"
-LICENSE = "GPLv2+"
-LIC_FILES_CHKSUM = "file://Licenses/README;md5=01227781a96150b429023a200313f5e5"
+# Copyright (C) 2023 Ocompany
 
-SRCBRANCH = "u-boot-2023.07.y"
-SRC_URI = "https://github.com/u-boot/u-boot.git;branch=${SRCBRANCH};protocol=https"
+inherit fsl-u-boot-localversion
+
+LICENSE = "GPLv2+"
+LIC_FILES_CHKSUM = "file://Licenses/README;md5=13bd014c01a429f38c39fe6e9f4a8062"
+
+DEPENDS += "flex-native bison-native"
+
+SRC_URI = "https://github.com/O-Software-Team/u-boot-ocompany.git;branch=${SRCBRANCH};protocol=http"
+SRC_URI[sha256sum] = "60d3abc63434cfa0f5e66b20c1fb11a080a2a00ce655c343befbbaa57231125b"
+
+SRCBRANCH = "master"
+
+PV = "v2023.11+git${SRCPV}"
 
 S = "${WORKDIR}/git"
-
-PACKAGE_ARCH = "${MACHINE_ARCH}"
+B = "${WORKDIR}/build"

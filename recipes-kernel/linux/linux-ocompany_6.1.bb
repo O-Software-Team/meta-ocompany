@@ -22,7 +22,14 @@ SRC_URI[sha256sum]="19f25ddbc64880c8b6cddd252257e28de7de40671f33dc379315b6464343
 
 FILES_${KERNEL_PACKAGE_NAME}-base += "${nonarch_base_libdir}/modules/${KERNEL_VERSION}/modules.builtin.modinfo "
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+
+# to get defconfig setup
+SRC_URI += "file://ocompany_defconfig"
 KERNEL_DEFCONFIG ?= "ocompany_defconfig"
+
+# or this
+KBUILD_DEFCONFIG = "ocompany_defconfig"
 
 S = "${WORKDIR}/git"
 
