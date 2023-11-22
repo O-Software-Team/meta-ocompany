@@ -25,7 +25,6 @@ FILES_${KERNEL_PACKAGE_NAME}-base += "${nonarch_base_libdir}/modules/${KERNEL_VE
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 # to get defconfig setup
-SRC_URI += "file://ocompany_defconfig"
 KERNEL_DEFCONFIG ?= "ocompany_defconfig"
 
 # or this
