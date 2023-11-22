@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://Licenses/README;md5=13bd014c01a429f38c39fe6e9f4a8062"
 DEPENDS += "flex-native bison-native"
 
 SRC_URI = "https://github.com/O-Software-Team/u-boot-ocompany.git;branch=${SRCBRANCH};protocol=http"
-SRC_URI[sha256sum] = "c31e7a1edc94d41b2413134adbbc7b8bed022b87efbf9e1f04896b11992d8499"
+SRC_URI[sha256sum] = "c94e47b26b93a071fa8ccca96312bc190560dcb9ea8fa668e4170486b0f03323"
 
 SRCBRANCH = "master"
 
