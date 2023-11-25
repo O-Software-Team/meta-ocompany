@@ -12,7 +12,7 @@ SRC_URI = "git://github.com/O-Software-Team/u-boot-ocompany.git;protocol=http;br
 SRC_URI[sha256sum] = "c94e47b26b93a071fa8ccca96312bc190560dcb9ea8fa668e4170486b0f03323"
 
 SRCBRANCH = "master"
-SRCREV = "b492e2f953320fd64ad21b9cc3351ddb3b19abcf"
+SRCREV = "1eef4d990fb6259e57451e987a6458d4d6ef8f51"
 
 PV = "v2023.11+git_${SRCBRANCH}"
 
