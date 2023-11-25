@@ -4,9 +4,7 @@ DEPENDS = "u-boot-mkimage-native"
 
 inherit deploy
 
-BOOTSCRIPT ??= "${S}/board/ocompany/bootscripts/bootscript-yocto.txt"
-BOOTSCRIPT_use-mainline-bsp ??= "${S}/board/ocompany/bootscripts/bootscript-mainline.txt"
-
+BOOTSCRIPT = "${S}/board/ocompany/bootscripts/bootscript-ubuntu.txt"
 UPGRADESCRIPT = "${S}/board/ocompany/bootscripts/upgrade.txt"
 
 do_mkimage () {

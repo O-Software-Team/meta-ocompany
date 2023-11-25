@@ -1,6 +1,7 @@
 # Copyright (C) 2023 Ocompany
 
 inherit fsl-u-boot-localversion
+inherit pypi setuptools3
 
 LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://Licenses/README;md5=2ca5f2c35c8cc335f0a19756634782f1"
@@ -15,5 +16,5 @@ SRCREV = "b492e2f953320fd64ad21b9cc3351ddb3b19abcf"
 
 PV = "v2023.11+git_${SRCBRANCH}"
 
-S = "${WORKDIR}/git"
+S = "${WORKDIR}/git/scripts/dtc/pylibfdt"
 B = "${WORKDIR}/build"
