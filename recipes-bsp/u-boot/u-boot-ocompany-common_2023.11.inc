@@ -1,20 +1,22 @@
-# Copyright (C) 2023 Ocompany
+DESCRIPTION = "i.MX U-Boot suppporting i.MX Ocompany odevice."
+
+LICENSE = "GPLv2+"
+LIC_FILES_CHKSUM = "file://Licenses/gpl-2.0.txt;md5=b234ee4d69f5fce4486a80fdaf4a4263"
+
+SRCBRANCH = "master"
+SRC_URI = "git://github.com/O-Software-Team/u-boot-ocompany.git;protocol=http;branch=${SRCBRANCH}"
+SRCREV = "1eef4d990fb6259e57451e987a6458d4d6ef8f51"
+
+DEPENDS += "flex-native bison-native bc-native dtc-native"
+
+PV = "2023.11"
+
+S = "${WORKDIR}/git"
+B = "${WORKDIR}/build"
 
 inherit fsl-u-boot-localversion
 inherit pypi setuptools3
 
-LICENSE = "GPLv2+"
-LIC_FILES_CHKSUM = "file://Licenses/README;md5=2ca5f2c35c8cc335f0a19756634782f1"
+LOCALVERSION ?= "-master"
 
-DEPENDS += "flex-native bison-native"
-SRC_URI = "git://github.com/O-Software-Team/u-boot-ocompany.git;protocol=http;branch=${SRCBRANCH} \
-"
-SRC_URI[sha256sum] = "c94e47b26b93a071fa8ccca96312bc190560dcb9ea8fa668e4170486b0f03323"
-
-SRCBRANCH = "master"
-SRCREV = "1eef4d990fb6259e57451e987a6458d4d6ef8f51"
-
-PV = "v2023.11+git_${SRCBRANCH}"
-
-S = "${WORKDIR}/git/scripts/dtc/pylibfdt"
-B = "${WORKDIR}/build"
+BOOT_TOOLS = "ocompany-boot-tools"
